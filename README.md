@@ -91,18 +91,17 @@ https://github.com/Atrides/eth-proxy/releases
 
 Or use python source code
 
-1) Download Python Version 2.7.10 for Windows
-https://www.python.org/downloads/
+1) Download Python Version 2.7.18 for Windows
+https://www.python.org/downloads/windows/
 
 2) Modify PATH variable (how-to http://www.java.com/en/download/help/path.xml) and add
    C:\Python27;C:\Python27\Scripts;
 
 3) Install python setuptools
-https://pypi.python.org/pypi/setuptools/#windows-7-or-graphical-install
+   pip install setuptools
 
 4) Install Python-Twisted
-https://pypi.python.org/pypi/Twisted/15.4.0
-File Twisted-15.4.0.win32-py2.7.msi (32bit) or Twisted-15.4.0.win-amd64-py2.7.msi (64bit)
+   pip install Twisted==15.4.0
 
 5) Install zope.interface, in console run:
 ```
@@ -110,11 +109,18 @@ File Twisted-15.4.0.win32-py2.7.msi (32bit) or Twisted-15.4.0.win-amd64-py2.7.ms
 ```
 6) Install PyWin32 v2.7
 pywin32-219.win32-py2.7.exe or pywin32-219.win-amd64-py2.7.exe
-http://sourceforge.net/projects/pywin32/files/pywin32/
+https://sourceforge.net/projects/pywin32/files/pywin32/Build%20219/
 
-7) Download eth-proxy. Extract eth-proxy.zip. Change settings in config.py and start with command:
+7) Download eth-proxy. Extract eth-proxy.zip. 
+
+8) Install pyinstaller
 ```
-  python xmr-proxy.py
+  PIP install pyinstaller==3.6
+```
+
+9) Build eth-proxy
+```
+pyinstaller eth-proxy.py --onefile
 ```
 
 #Contact
