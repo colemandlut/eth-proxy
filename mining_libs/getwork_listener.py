@@ -50,6 +50,8 @@ class Root(Resource):
             if self.isWorkerID:
                 worker_name = request.uri[1:15].split("/")[0]
                 if not worker_name:
+                    worker_name = data['worker']
+                if not worker_name:
                     ip_temp = request.getClientIP().split('.')
                     worker_name = str( int(ip_temp[0])*16777216 + int(ip_temp[1])*65536 + int(ip_temp[2])*256 + int(ip_temp[3]) )
             else:
