@@ -74,10 +74,10 @@ eth-proxy is built in python. I have been testing it with 2.7.3, but it should w
 
 #Installation and start
 
-* [Linux]
+* [Linux CentOS7]
 1) install twisted
 ```
- apt-get install python-twisted
+ yum install python-twisted-web
 ```
 
 2) start proxy with
